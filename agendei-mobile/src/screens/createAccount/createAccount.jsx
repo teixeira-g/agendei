@@ -1,7 +1,7 @@
 import {Image, Text, TextInput, TouchableOpacity, View} from "react-native";
 import icon from '../../constants/icon.js'
 import Button from '../../components/button/button.jsx';
-import {styles} from "../login/login.style";
+import {styles} from "../login/login.styles";
 
 function CreateAccount() {
     return(
