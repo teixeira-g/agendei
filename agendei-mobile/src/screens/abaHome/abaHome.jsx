@@ -7,7 +7,10 @@ import icon from "../../constants/icon.js";
 function AbaHome() {
     return (
         <View style={styles.container}>
-            <Text tyle={styles.text}>Agende os seus serviços médicos</Text>
+
+            <View style={styles.containerText}>
+                <Text tyle={styles.text}>Agende os seus serviços médicos</Text>
+            </View>
 
             <FlatList data={doctors}
                       keyExtractor={(doc)=> doc.id_doctor}

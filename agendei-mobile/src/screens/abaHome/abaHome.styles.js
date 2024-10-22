@@ -5,13 +5,16 @@ export const styles = {
         backgroundColor: COLORS.white,
         flex: 1,
         justifyContent: 'space-between',
-        padding: 12,
-        paddingTop: 50,
+        paddingRight: 12,
+        paddingLeft: 12,
     },
     text: {
         fontSize: FONT_SIZE.md,
         color: COLORS.gray1,
         marginBottom: 15,
         marginLeft: 10,
-    }
+    },
+    containerText:{
+      alignItems: 'center',
+    },
 }
