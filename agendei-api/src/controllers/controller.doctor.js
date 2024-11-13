@@ -42,5 +42,13 @@ async function Excluir(req, res){
     res.status(200).json(doctor);
 }
 
+async function ListarServicos(req, res){
 
-export default {Listar, Inserir, Editar, Excluir}
+    const id_doctor = req.params.id_doctor;
+    const serv = await ServiceDoctor.ListarServicos(id_doctor);
+
+    res.status(200).json(serv);
+}
+
+
+export default {Listar, Inserir, Editar, Excluir, ListarServicos}
