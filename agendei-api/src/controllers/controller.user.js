@@ -1,4 +1,5 @@
 import serviceUser from "../services/service.user.js";
+import ServiceUser from "../services/service.user.js";
 
 async function Inserir(req, res){
 
@@ -23,4 +24,12 @@ async function Login(req, res){
 
 }
 
-export default { Inserir, Login }
+async function Profile(req, res){
+
+    const id_user = req.id_user;
+    const user = await ServiceUser.Profile(id_user);
+
+    res.status(200).json(user);
+}
+
+export default { Inserir, Login, Profile }
