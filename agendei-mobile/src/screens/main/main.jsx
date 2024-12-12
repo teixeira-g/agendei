@@ -1,4 +1,3 @@
-import {NavigationContainer} from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import icon from '../../constants/icon.js'
 
@@ -11,7 +10,6 @@ const Tab = createBottomTabNavigator();
 
 function Main() {
     return (
-        <NavigationContainer>
             <Tab.Navigator>
 
                 <Tab.Screen name={'Home'} component={AbaHome} options={{
@@ -64,9 +62,7 @@ function Main() {
                     },
                     tabBarShowLabel: false,
                 }}/>
-
             </Tab.Navigator>
-        </NavigationContainer>
     );
 }
 

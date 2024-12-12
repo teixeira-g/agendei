@@ -2,9 +2,13 @@ import {View, Text, FlatList} from "react-native";
 import {styles} from './abaHome.styles.js'
 import {doctors} from "../../constants/data";
 import Doctor from "../../components/doctor/doctor.jsx";
-import icon from "../../constants/icon.js";
 
-function AbaHome() {
+function AbaHome(props) {
+
+    function ClickDoctor(id_doctor, name, specialty, icon){
+        props.navigation.navigate("services")
+    }
+
     return (
         <View style={styles.container}>
 
@@ -15,10 +19,14 @@ function AbaHome() {
             <FlatList data={doctors}
                       keyExtractor={(doc)=> doc.id_doctor}
                       renderItem={({item}) => {
-                          return <Doctor name={item.name}
-                             icon={item.icon === "M" ? icon.male : icon.female}
-                             specialty={item.specialty} />}}
+                          return <Doctor id_doctor={item.id_doctor}
+                             name={item.name}
+                             icon={item.icon} // M or F
+                             specialty={item.specialty}
+                             onPress={ClickDoctor}
+                          />}}
                       showsVerticalScrollIndicator={false}/>
+
         </View>
     );
 }

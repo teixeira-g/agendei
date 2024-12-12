@@ -4,7 +4,6 @@ export const styles = {
     container: {
         backgroundColor: COLORS.white,
         flex: 1,
-        paddingTop: 50,
     },
     banner:{
         backgroundColor: COLORS.blue,
