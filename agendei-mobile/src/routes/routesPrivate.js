@@ -10,7 +10,7 @@ function RoutesPrivate(){
     return(
         <Stack.Navigator>
 
-            <Stack.Screen name={"main"} component={Main} options={{headerShown: false}}/>
+            <Stack.Screen name={"Home"} component={Main} options={{headerShown: false}}/>
 
             <Stack.Screen name={"services"} component={Services} options={{
                                                                     headerTitle: "Serviços",
@@ -21,7 +21,13 @@ function RoutesPrivate(){
                                                                  }}
             />
 
-            <Stack.Screen name={"schedule"} component={Schedule} options={{headerShown: false}}/>
+            <Stack.Screen name={"schedule"} component={Schedule} options={{
+                headerTitle: "Agendamento",
+                headerTitleAlign: "center",
+                headerShadowVisible: false,
+                headerTintColor: COLORS.blue,
+            }}
+            />
 
         </Stack.Navigator>
     )

@@ -6,7 +6,12 @@ import Doctor from "../../components/doctor/doctor.jsx";
 function AbaHome(props) {
 
     function ClickDoctor(id_doctor, name, specialty, icon){
-        props.navigation.navigate("services")
+        props.navigation.navigate("services", {
+            id_doctor,
+            name,
+            specialty,
+            icon
+        });
     }
 
     return (

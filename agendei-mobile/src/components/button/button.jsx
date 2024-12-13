@@ -1,16 +1,10 @@
-import {Alert, Text, TouchableOpacity} from "react-native";
+import { Text, TouchableOpacity} from "react-native";
 import {styles} from './button.styles';
-
 
 function Button(props){
 
-    function TesteClick(){
-        Alert.alert("Clicou no botão")
-
-    }
-
     return(
-        <TouchableOpacity onPress={TesteClick}
+        <TouchableOpacity onPress={props.onPress}
                           style={[styles.btn,
                               props.theme === "danger" ? styles.danger : styles.primary]} >
             <Text style={styles.text}>
